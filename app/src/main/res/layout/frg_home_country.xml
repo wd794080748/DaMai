@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@mipmap/test"></android.support.v4.view.ViewPager>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dot1"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/dot_selector" />
+
+                    <TextView
+                        android:id="@+id/dot2"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/dot_selector" />
+
+                    <TextView
+                        android:id="@+id/dot3"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/dot_selector" />
+
+                    <TextView
+                        android:id="@+id/dot4"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/dot_selector" />
+
+                    <TextView
+                        android:id="@+id/dot5"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/dot_selector" />
+
+                    <TextView
+                        android:id="@+id/dot6"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/dot_selector" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="「每日专享」"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_country_meiri1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/fujin" />
+
+                <ImageView
+                    android:id="@+id/iv_country_meiri2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/qinzi" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="「精选专辑」"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_country_jinxuan1"
+                    style="@style/country_jinxuan_style"
+                    android:src="@mipmap/qinzi" />
+
+                <ImageView
+                    android:id="@+id/iv_country_jinxuan2"
+                    style="@style/country_jinxuan_style"
+                    android:src="@mipmap/qinzi" />
+
+                <ImageView
+                    android:id="@+id/iv_country_jinxuan3"
+                    style="@style/country_jinxuan_style"
+                    android:src="@mipmap/qinzi" />
+
+                <ImageView
+                    android:id="@+id/iv_country_jinxuan4"
+                    style="@style/country_jinxuan_style"
+                    android:src="@mipmap/qinzi" />
+
+                <ImageView
+                    android:id="@+id/iv_country_jinxuan5"
+                    style="@style/country_jinxuan_style"
+                    android:src="@mipmap/qinzi" />
+
+                <ImageView
+                    android:id="@+id/iv_country_jinxuan6"
+                    style="@style/country_jinxuan_style"
+                    android:src="@mipmap/qinzi" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="「全国巡演」"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_country_xunyan1"
+                    style="@style/country_jinxuan_style"
+                    android:src="@mipmap/qinzi" />
+
+                <ImageView
+                    android:id="@+id/iv_country_xunyan2"
+                    style="@style/country_jinxuan_style"
+                    android:src="@mipmap/qinzi" />
+
+                <ImageView
+                    android:id="@+id/iv_country_xunyan3"
+                    style="@style/country_jinxuan_style"
+                    android:src="@mipmap/qinzi" />
+
+                <ImageView
+                    android:id="@+id/iv_country_xunyan4"
+                    style="@style/country_jinxuan_style"
+                    android:src="@mipmap/qinzi" />
+
+                <ImageView
+                    android:id="@+id/iv_country_xunyan5"
+                    style="@style/country_jinxuan_style"
+                    android:src="@mipmap/qinzi" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

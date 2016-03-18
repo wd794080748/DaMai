@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_local"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:gravity="center"
+            android:text="本地推荐"
+            android:textColor="@color/btn_font_selector"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_country"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffffff"
+            android:gravity="center"
+            android:text="全国热点"
+            android:textColor="@color/btn_font_selector"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_line"
+        android:layout_width="wrap_content"
+        android:layout_height="1.5dp"
+        android:background="@mipmap/rank_line"/>
+   <android.support.v4.view.ViewPager
+       android:id="@+id/vp_home"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+   </android.support.v4.view.ViewPager>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wangdong.damai.ContentActivity">
+
+    <TextView
+        android:id="@+id/tv_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/radioGroup"
+        android:layout_marginBottom="8dp"
+        android:background="#909090" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/btn_home"
+            style="@style/buttonStyle"
+            android:drawableTop="@drawable/btn_home_selector"
+            android:text="推荐" />
+
+        <RadioButton
+            android:id="@+id/btn_class"
+            style="@style/buttonStyle"
+            android:drawableTop="@drawable/btn_class_selector"
+            android:text="演出" />
+
+        <RadioButton
+            android:id="@+id/btn_movie"
+            style="@style/buttonStyle"
+            android:drawableTop="@drawable/btn_home_selector"
+            android:text="电影" />
+
+        <RadioButton
+            android:id="@+id/btn_set"
+            style="@style/buttonStyle"
+            android:drawableTop="@drawable/btn_set_selector"
+            android:text="我的" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/fl_show"
+        android:layout_width="match_parent"
+        android:layout_above="@id/tv_line"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+</RelativeLayout>

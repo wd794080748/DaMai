@@ -2,6 +2,7 @@ package com.wangdong.damai;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -16,6 +17,9 @@ import com.wangdong.damai.Fragment.ClassFragment;
 import com.wangdong.damai.Fragment.HomeFragmnet;
 import com.wangdong.damai.Fragment.Moviefragment;
 import com.wangdong.damai.Fragment.SetFragment;
+import com.wangdong.damai.bean.HomeRecyclerView;
+
+import java.io.Serializable;
 
 public class ContentActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener{
     private RadioGroup radioGroup;
@@ -26,6 +30,7 @@ public class ContentActivity extends BaseActivity implements RadioGroup.OnChecke
     private SetFragment setFragment;
     private FragmentManager fragmentManager;
     private android.support.v4.app.FragmentTransaction fragmentTransaction;
+    private HomeRecyclerView homeObject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +39,14 @@ public class ContentActivity extends BaseActivity implements RadioGroup.OnChecke
         activityList.add(this);
        fragmentManager=getSupportFragmentManager();
         initView();
+        initData();
         radioGroup.setOnCheckedChangeListener(this);
         homeButton.setChecked(true);
+    }
+
+    private void initData() {
+        Intent intent = getIntent();
+        homeObject = (HomeRecyclerView) intent.getSerializableExtra("homeObject");
     }
 
     private void initView() {
@@ -62,7 +73,11 @@ public class ContentActivity extends BaseActivity implements RadioGroup.OnChecke
         switch (checkedId){
             case R.id.btn_home:
                 if(homeFragmnet==null){
+                    //创建fragment，获取MainActivity传递过来的对象，继续传递到HomeFragment
                     homeFragmnet=new HomeFragmnet();
+                    Bundle bundle=new Bundle();
+                    bundle.putSerializable("homeObject",homeObject);
+                    homeFragmnet.setArguments(bundle);
                     fragmentTransaction.add(R.id.fl_show,homeFragmnet);
                 }else{
                     fragmentTransaction.show(homeFragmnet);

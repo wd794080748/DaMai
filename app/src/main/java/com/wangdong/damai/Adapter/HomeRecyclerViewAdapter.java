@@ -1,7 +1,9 @@
 package com.wangdong.damai.Adapter;
 
 import android.content.Context;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,11 +22,13 @@ import java.util.List;
 public class HomeRecyclerViewAdapter extends
         RecyclerView.Adapter<HomeRecyclerViewAdapter.ViewHolder> {
     private LayoutInflater inflater;
-    private List<HomeRecyclerView> recyclerViewList;
+    private List<String> imgUrlList;
     private Context context;
-    public HomeRecyclerViewAdapter(Context context,List<HomeRecyclerView> recyclerViewList) {
+    List<String> titleList;
+    public HomeRecyclerViewAdapter(Context context, List<String> imgUrlList, List<String> titleList) {
         this.inflater=LayoutInflater.from(context);
-        this.recyclerViewList=recyclerViewList;
+        this.imgUrlList=imgUrlList;
+        this.titleList=titleList;
         this.context=context;
 
     }
@@ -37,14 +41,14 @@ public class HomeRecyclerViewAdapter extends
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        String url=recyclerViewList.get(position).getUrl();
+        String url=imgUrlList.get(position);
         Picasso.with(context).load(url).into(holder.imageView);
-        holder.textView.setText(recyclerViewList.get(position).getTitle()+"");
+        holder.textView.setText(titleList.get(position)+"");
     }
 
     @Override
     public int getItemCount() {
-        return recyclerViewList.size();
+        return imgUrlList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

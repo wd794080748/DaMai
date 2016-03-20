@@ -3,24 +3,21 @@ package com.wangdong.damai.bean;
 import java.util.List;
 
 /**
- * Created by wd794 on 2016/3/7 0007.
+ * Created by wd794 on 2016/3/19 0019.
  */
-public class Concert {
-
+public class HomeLocalListViewObj1 {
     /**
-     * ProjectID : 95888
-     * Name : 2016田馥甄世界巡回演唱会武汉站
-     * PriceStr : 200,300,500,700,900,1200,1500
-     * priceName : 200-1500元
-     * ShowTime : 2016.09.03
+     * ProjectID : 97408
+     * Name : 逃跑计划2016“LIKE A BIRD”巡回演唱会武汉站
+     * PriceStr : 180,280,380,580,680
+     * priceName : 180-680元
+     * ShowTime : 2016.06.19 20:00
      * SiteStatus : 8
      * cityname : 武汉市
-     * VenName : 湖北洪山体育馆
-     * VenId : 733
-     * IsXuanZuo : 1
-     * Mark : 重磅热荐
-     * openSum : 168040
-     * recommendation : 重磅热荐
+     * VenName : 武汉琴台大剧院
+     * VenId : 589
+     * IsXuanZuo : 0
+     * openSum : 23042
      */
 
     private List<ListEntity> list;

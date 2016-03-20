@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="150dp"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/iv_home_local_item"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wel_splash" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/rl"
+        android:layout_toRightOf="@+id/rl"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/tv_local_listview_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:maxLines="2"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:text="逃跑计划2016“LIKE A BIRD”巡回演唱会武汉站"
+            android:textSize="16dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_zuo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_local_listview_title"
+            android:layout_margin="3dp">
+
+            <ImageView
+                android:id="@+id/iv_local_listview_zuo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zuo" />
+
+            <TextView
+                android:id="@+id/tv_local_listview_zuostate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_local_listview_zuo"
+                android:layout_alignTop="@id/iv_local_listview_zuo"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_local_listview_zuo"
+                android:background="#A0C71C"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="预售中"
+                android:textColor="#ffffff"
+                android:textSize="8dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="3dp"
+            android:layout_below="@+id/rl_zuo">
+
+            <TextView
+                android:id="@+id/tv_local_listview_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="时间" />
+
+            <TextView
+                android:id="@+id/tv_local_listview_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tv_local_listview_time"
+                android:text="场馆" />
+
+            <TextView
+                android:id="@+id/tv_local_listview_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tv_local_listview_place"
+                android:text="票价" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

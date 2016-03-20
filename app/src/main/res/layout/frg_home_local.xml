@@ -1,39 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview_home_local"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="100dp">
-    </android.support.v7.widget.RecyclerView>
-      
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/home_local_conBanner"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"></com.bigkoo.convenientbanner.ConvenientBanner>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_home_local"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"></android.support.v7.widget.RecyclerView>
+
             <TextView
                 android:id="@+id/tv_home_local_pay"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:textSize="20sp"
+                android:text="「积分支付」"
                 android:textColor="#000000"
-                android:text="「积分支付」"/>
+                android:textSize="19sp" />
+
             <ImageView
-                android:id="@+id/iv_home_local_jifen"
+                android:id="@+id/iv_home_local_jifen1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
                 android:src="@mipmap/jifen" />
+
+            <ImageView
+                android:id="@+id/iv_home_local_jifen2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/jifen" />
+
             <TextView
                 android:id="@+id/tv_home_local_new"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:gravity="center_vertical"
                 android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
                 android:text="最新推荐"
                 android:textColor="#909090"
-                android:textSize="18sp"/>
-            <ListView
-                android:id="@+id/lv_home_local"
+                android:textSize="17sp" />
+
+
+            <com.wangdong.damai.View.ListViewForScrollView
+                android:id="@+id/lv_home_local_recon"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></ListView>
+                android:dividerHeight="8dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tv_home_local_like"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="猜你喜欢"
+                android:textColor="#909090"
+                android:textSize="17sp" />
+
+            <com.wangdong.damai.View.ListViewForScrollView
+                android:id="@+id/lv_home_local_like"
+                android:layout_width="match_parent"
+                android:dividerHeight="8dp"
+                android:layout_height="match_parent"/>
         </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
 

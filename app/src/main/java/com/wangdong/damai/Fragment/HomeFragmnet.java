@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -89,7 +90,11 @@ public class HomeFragmnet extends BaseFragment implements Button.OnClickListener
 
     private void initData() {
         fragmentList=new ArrayList<>();
-        fragmentList.add(new LocalHomeFragment());
+        //获取HomeFragment传递的对象，并继续传递到LocalHomeFragment中
+        //对于activity中fragmnet里面的fragment，直接用setArgument进行两个fragment之间的传递
+        LocalHomeFragment localHomeFragment = new LocalHomeFragment();
+        localHomeFragment.setArguments(getArguments());
+        fragmentList.add(localHomeFragment);
         fragmentList.add(new CountryHomeFragment());
         fragmentStatePagerAdapter=new FragmentViewAdapter(getFragmentManager(),fragmentList);
         viewPager.setAdapter(fragmentStatePagerAdapter);
